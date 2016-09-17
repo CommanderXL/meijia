@@ -169,5 +169,37 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        !function (window) {
+            var pageModel = {
+                domMap: {},
+                setDomMap: function () {
+                    var container = document.querySelector('.page-container');
+
+                    this.domMap = {
+                        userNameEl: container.querySelector('.page-human'),
+                        sideNavEl: container.querySelector('.page-side-nav')
+                    }
+                },
+                eventFn: function () {
+                    var self = this;
+                    var doms = this.domMap;
+
+                    doms.userNameEl.addEventListener('click', function () {
+                        console.log(123);
+                        doms.sideNavEl.classList.toggle('side-nav-show');
+                    })
+                },
+                init: function () {
+                    this.setDomMap();
+
+                    this.eventFn();
+                }
+            };
+
+            pageModel.init();
+        }(window);
+    </script>
 </body>
 </html>

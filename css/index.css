@@ -2,6 +2,7 @@
   position: relative;
   height: 100%;
   background-color: #f0f0f0;
+  overflow-x: hidden;
 }
 .page-header {
   position: fixed;
@@ -175,6 +176,9 @@
   width: 175px;
   background: #fff;
   overflow-y: auto;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  transform: translateX(175px);
 }
 .page-side-nav .user-avatar {
   padding: 45px 45px 31px 45px;
@@ -239,4 +243,7 @@
   right: 0;
   overflow-y: auto;
   z-index: 2;
+}
+.side-nav-show {
+  transform: translate(0, 0);
 }
