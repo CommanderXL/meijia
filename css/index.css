@@ -1,5 +1,6 @@
 .page-container {
   position: relative;
+  height: 100%;
   background-color: #f0f0f0;
 }
 .page-header {
@@ -29,11 +30,11 @@
   position: relative;
   height: 300px;
   margin-bottom: 14px;
+  background-color: #fff;
 }
 .page-article .imgs-box {
   position: relative;
   height: 255px;
-  border: 1px solid #e3e3e3;
 }
 .page-article .article-nav {
   position: relative;
@@ -166,13 +167,14 @@
   background-size: contain;
 }
 .page-side-nav {
-  position: fixed;
+  position: absolute;
   top: 48px;
   bottom: 0;
   right: 0;
   z-index: 9999;
   width: 175px;
   background: #fff;
+  overflow-y: auto;
 }
 .page-side-nav .user-avatar {
   padding: 45px 45px 31px 45px;
@@ -228,4 +230,13 @@
 }
 .page-side-nav .side-li .link.pending-refund .link-text::before {
   background-image: url("../images/side_icon_refund@2x.png");
+}
+.page-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  z-index: 2;
 }
