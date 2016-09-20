@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>评价页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/comment.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="comment-box" contenteditable>
+        </div>
+        <div class="img-container clearfix">
+            <div class="img-box">
+
+            </div>
+            <div class="img-upload img-box">
+                <input type="file" accept="image/*">
+            </div>
+        </div>
+        <div class="comment-btn">
+            提交评论
+        </div>
+    </div>
+    <script>
+        (function (window) {
+            var pageModel = {
+                domMap: {},
+                setDomMap: function () {
+                    this.domMap = {
+                        commentBox: document.querySelector('.comment-box'),
+                        imgUpload: document.querySelector('.img-upload')
+                    }
+                },
+                eventFn: function () {
+                    var self = this,
+                            domMap = this.domMap;
+
+                    domMap.commentBox.addEventListener('input', function (e) {
+                        var text = this.innerHTML;
+                        if(text.trim().length > 0) {
+                            !this.classList.contains('sub-hide') && this.classList.add('sub-hide');
+                        } else {
+                            this.classList.contains('sub-hide') && this.classList.remove('sub-hide');
+                        }
+                    });
+
+                    domMap.imgUpload.addEventListener('change', function () {
+                        console.log(this.file[0]);
+                    });
+
+                },
+                init: function () {
+                    this.setDomMap();
+                    this.eventFn();
+                }
+            };
+
+            pageModel.init();
+        })(window);
+    </script>
+</body>
+</html>

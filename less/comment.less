@@ -1,0 +1,63 @@
+.page-container {
+  padding: 10px 10px 0 10px;
+  background-color: #f0f0f0;
+}
+
+.comment-box {
+  position: relative;
+  height: 210px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.comment-box::before {
+  position: absolute;
+  content: '请评价您对本次美甲服务的满意度';
+  top: 15px;
+  left: 15px;
+  color: #ccc;
+}
+
+.comment-box.sub-hide::before {
+  display: none;
+}
+
+.img-box {
+  position: relative;
+  margin-right: 14px;
+  width: 90px;
+  height: 90px;
+  float: left;
+}
+
+.img-upload {
+  background-image: url(../images/order_icon_photo@2x.png);
+  background-size: contain;
+}
+
+input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 90px;
+  opacity: 0;
+  z-index: 50;
+}
+
+.comment-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  background-color: #221714;
+}
+

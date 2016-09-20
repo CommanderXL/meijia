@@ -1,10 +1,8 @@
 .page-container {
-  position: relative;
-  height: 100%;
   background-color: #f0f0f0;
   overflow-x: hidden;
 }
-.page-header {
+/*.page-header {
   position: fixed;
   top: 0;
   height: 48px;
@@ -14,9 +12,10 @@
   background-color: #f0f1f0;
   z-index: 9000;
 }
+
 .page-logo {
   width: 56px;
-}
+}*/
 .page-human {
   position: absolute;
   right: 20px;
