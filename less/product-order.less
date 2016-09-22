@@ -5,7 +5,7 @@
 .container-detail {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 50px;
   left: 0;
   right: 0;
   overflow-y: auto;
@@ -29,8 +29,19 @@
         color: #333;
       }
       .collection-btn {
+        position: relative;
         font-size: 15px;
         color: #666;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 32px;
+          height: 16px;
+          width: 16px;
+          background: url("../images/side_icon_collection@2x.png");
+          background-size: contain;
+        }
       }
     }
     p {
@@ -115,4 +126,27 @@
       color: #878787;
     }
   }
+}
+
+.order-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #ff5650;
+  font-size: 17px;
+  background-color: #fff;
+}
+
+.all-btn {
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  color: #878787;
+  text-align: center;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
 }
