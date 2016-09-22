@@ -1,6 +1,18 @@
 .page-container {
   background: #f0f0f0;
 }
+
+.container-detail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
 .product-detail {
   position: relative;
   .detail-img {
@@ -63,12 +75,44 @@
 }
 
 .user-comment {
+  margin-top: 10px;
+  background-color: #fff;
   .comment-header {
     font-size: 17px;
     line-height: 1;
     padding: 15px;
     text-align: center;
     color: #333;
-    border-bottom: 2px solid #f0f0f0;
+  }
+  .comment-list {
+    .comment-li {
+      border-top: 2px solid #f0f0f0;
+    }
+    .comment-info {
+      padding: 13px 0 2px 13px;
+      .img-box {
+        height: 45px;
+        width: 45px;
+        border-radius: 100%;
+        background-image: url("../images/home-page_icon_whole_selected@2x.png");
+        background-size: contain;
+      }
+      .user-info {
+        font-size: 15px;
+        .name {
+          margin-bottom: 5px;
+          color: #505050;
+        }
+        .comment-time {
+          color: #b3b3b3;
+        }
+      }
+    }
+    .comment-detail {
+      font-size: 14px;
+      line-height: 17px;
+      padding: 0 14px 16px 14px;
+      color: #878787;
+    }
   }
 }
