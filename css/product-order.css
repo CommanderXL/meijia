@@ -54,9 +54,9 @@
   background-color: #fff;
 }
 .product-detail .detail-price .active-price {
-  padding: 17px 0 13px 0;
+  padding: 9px 0 13px 0;
   font-size: 15px;
-  line-height: 45px;
+  line-height: 20px;
 }
 .product-detail .detail-price .active-price .money {
   color: red;
@@ -70,7 +70,7 @@
   color: #c4c4c4;
 }
 .product-detail .detail-price .user-like {
-  margin-bottom: 18px;
+  margin-bottom: 9px;
 }
 .product-detail .detail-time {
   color: #adadad;
