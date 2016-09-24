@@ -25,30 +25,36 @@
                 </div>
             </div>
             <div class="person-info">
-                <div table class="order-nums">
-                    <div table="cell v-m h-l p30">数量: </div>
-                    <div table="cell v-m h-l">AR</div>
-                </div>
-                <div table class="order-service">
-                    <div table="cell v-m h-l p30">服务方式:</div>
-                    <div table="cell v-m h-l"></div>
-                </div>
-                <div table class="date-person">
-                    <div table="cell v-m h-l p30">预约人: </div>
-                    <div table="cell v-m h-l">风光</div>
-                </div>
-                <div table class="phone">
-                    <div table="cell v-m h-l p30">手机号: </div>
-                    <div table="cell v-m h-l">123123123</div>
-                </div>
-                <div table class="service-time">
-                    <div table="cell v-m h-l p30">服务时间: </div>
-                    <div table="cell v-m h-l">9: 00 - 18: 00</div>
-                </div>
-                <div table class="info">
-                    <div table="cell v-m h-l p30">备注信息: </div>
-                    <div table="cell v-m h-l"></div>
-                </div>
+                <ul class="info-ul">
+                    <li table class="info-li order-nums">
+                        <div table="cell v-m h-l p30">数量: </div>
+                        <div table="cell v-m h-l">
+                            <div class="substract-btn"></div>
+                            <p class="order-num">1</p>
+                            <div class="add-btn"></div>
+                        </div>
+                    </li>
+                    <li table class="info-li order-service">
+                        <div table="cell v-m h-l p30">服务方式:</div>
+                        <div table="cell v-m h-l">预约到店</div>
+                    </li>
+                    <li table class="info-li date-person">
+                        <div table="cell v-m h-l p30">预约人: </div>
+                        <div table="cell v-m h-l">风光</div>
+                    </li>
+                    <li table class="info-li phone">
+                        <div table="cell v-m h-l p30">手机号: </div>
+                        <div table="cell v-m h-l">123123123</div>
+                    </li>
+                    <li table class="info-li service-time">
+                        <div table="cell v-m h-l p30">服务时间: </div>
+                        <div table="cell v-m h-l">9: 00 - 18: 00</div>
+                    </li>
+                    <li table class="info-li info">
+                        <div table="cell v-m h-l p30">备注信息: </div>
+                        <div table="cell v-m h-l"></div>
+                    </li>
+                </ul>
             </div>
             <div class="order-detail">
                 <div class="order-header">
@@ -57,14 +63,14 @@
                 <div table class="offline-pay">
                     <div table="cell v-m h-l p50">
                         到店支付
+                        <div class="circle"></div>
                     </div>
-                    <div table="cell v-m h-r p50"></div>
                 </div>
-                <div table class="online-pay">
+                <div table class="online-pay active">
                     <div table="cell v-m h-l p50">
                         在线支付
+                        <div class="circle"></div>
                     </div>
-                    <div table="cell v-m h-r p50"></div>
                 </div>
             </div>
         </div>
