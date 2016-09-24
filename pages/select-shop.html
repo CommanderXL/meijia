@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>选择店铺</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/select-shop.css">
+</head>
+<body>
+    <div class="page-container">
+        <div table class="page-header">
+            <div table="cell v-m h-c p50" class="price-tips">
+                <span>按价格</span>
+            </div>
+            <div table="cell v-m h-c p50" class="distance-tips active">
+                <span>按距离</span>
+            </div>
+        </div>
+        <div class="page-map">
+
+        </div>
+        <div class="shop-container">
+            <div class="up-btn"></div>
+            <ul class="shop-list">
+                <li class="shop-li">
+                    <div class="shop-item">
+                        <div class="shop-detail">
+                            <div class="detail-des clearfix">
+                                <img src="../images/select-shop1.png" alt="">
+                                <p class="shop-name">丰盛美甲店 <span class="shop-distance">约 4.2 km</span></p>
+                                <p class="shop-price">¥ 60 元</p>
+                                <p class="shop-location">地址: <span>北京市西三环北路27 新文化街小区业主委</span></p>
+                            </div>
+                            <p class="run-time">营业时间: <span>8: 00 - 18: 00</span></p>
+                            <p class="shop-tel">商铺电话: <span>112224567890</span></p>
+                        </div>
+                    </div>
+                    <div table class="shop-nav">
+                        <div table="cell v-m h-c p50" class="nav-btn">
+                            导航去这里
+                        </div>
+                        <div table="cell v-m h-c p50" class="order-btn">
+                            立即预约
+                        </div>
+                    </div>
+                </li>
+                <li class="shop-li">
+                    <div class="shop-item">
+                        <div class="shop-detail">
+                            <div class="detail-des clearfix">
+                                <img src="../images/select-shop1.png" alt="">
+                                <p class="shop-name">丰盛美甲店 <span class="shop-distance">约 4.2 km</span></p>
+                                <p class="shop-price">¥ 60 元</p>
+                                <p class="shop-location">地址: <span>北京市西三环北路27 新文化街小区业主委</span></p>
+                            </div>
+                            <p class="run-time">营业时间: <span>8: 00 - 18: 00</span></p>
+                            <p class="shop-tel">商铺电话: <span>112224567890</span></p>
+                        </div>
+                    </div>
+                    <div table class="shop-nav">
+                        <div table="cell v-m h-c p50" class="nav-btn">
+                            导航去这里
+                        </div>
+                        <div table="cell v-m h-c p50" class="order-btn">
+                            立即预约
+                        </div>
+                    </div>
+                </li>
+                <li class="shop-li">
+                    <div class="shop-item">
+                        <div class="shop-detail">
+                            <div class="detail-des clearfix">
+                                <img src="../images/select-shop1.png" alt="">
+                                <p class="shop-name">丰盛美甲店 <span class="shop-distance">约 4.2 km</span></p>
+                                <p class="shop-price">¥ 60 元</p>
+                                <p class="shop-location">地址: <span>北京市西三环北路27 新文化街小区业主委</span></p>
+                            </div>
+                            <p class="run-time">营业时间: <span>8: 00 - 18: 00</span></p>
+                            <p class="shop-tel">商铺电话: <span>112224567890</span></p>
+                        </div>
+                    </div>
+                    <div table class="shop-nav">
+                        <div table="cell v-m h-c p50" class="nav-btn">
+                            导航去这里
+                        </div>
+                        <div table="cell v-m h-c p50" class="order-btn">
+                            立即预约
+                        </div>
+                    </div>
+                </li>
+                <li class="shop-li">
+                    <div class="shop-item">
+                        <div class="shop-detail">
+                            <div class="detail-des clearfix">
+                                <img src="../images/select-shop1.png" alt="">
+                                <p class="shop-name">丰盛美甲店 <span class="shop-distance">约 4.2 km</span></p>
+                                <p class="shop-price">¥ 60 元</p>
+                                <p class="shop-location">地址: <span>北京市西三环北路27 新文化街小区业主委</span></p>
+                            </div>
+                            <p class="run-time">营业时间: <span>8: 00 - 18: 00</span></p>
+                            <p class="shop-tel">商铺电话: <span>112224567890</span></p>
+                        </div>
+                    </div>
+                    <div table class="shop-nav">
+                        <div table="cell v-m h-c p50" class="nav-btn">
+                            导航去这里
+                        </div>
+                        <div table="cell v-m h-c p50" class="order-btn">
+                            立即预约
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        (function (window) {
+            var domMap = {
+                upBtn: document.querySelector('.up-btn'),
+                shopContainer: document.querySelector('.shop-container'),
+                shopList: document.querySelector('.shop-list')
+            };
+
+            domMap.upBtn.addEventListener('click', function () {
+                domMap.shopContainer.classList.toggle('up');
+            });
+        })(window);
+    </script>
+</body>
+</html>

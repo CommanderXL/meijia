@@ -1,0 +1,118 @@
+.page-container {
+  background-color: #fafafa;
+}
+.order-container {
+  position: absolute;
+  top: 0;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+}
+.shop-item {
+  background-color: #fff;
+  padding: 13px 15px 15px 10px;
+  margin-bottom: 10px;
+}
+.shop-item .shop-detail .detail-des {
+  margin-bottom: 12px;
+}
+.shop-item .shop-detail img {
+  float: left;
+  height: 90px;
+  width: 90px;
+  margin-right: 15px;
+}
+.shop-item .shop-detail .goods-name {
+  position: relative;
+  font-size: 17px;
+  color: #333;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.shop-item .shop-detail .goods-name .shop-price {
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  font-size: 15px;
+  color: #ff5650;
+}
+.shop-item .shop-detail .shop-name {
+  position: relative;
+  font-size: 17px;
+  color: #333;
+  margin-bottom: 11px;
+}
+.shop-item .shop-detail .shop-name .shop-distance {
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  font-size: 14px;
+  color: #666;
+}
+.shop-item .shop-detail .shop-location {
+  font-size: 15px;
+  color: #878787;
+  line-height: 20px;
+}
+.shop-item .run-time {
+  font-size: 15px;
+  color: #989898;
+  margin-bottom: 10px;
+}
+.shop-item .shop-tel {
+  font-size: 15px;
+  color: #989898;
+}
+.shop-item .shop-tel span {
+  color: #00c7c7;
+}
+.person-info {
+  margin-bottom: 10px;
+}
+.person-info [table] {
+  background-color: #fff;
+  height: 50px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.person-info [table] [table]:first-child {
+  padding-left: 10px;
+  color: #878787;
+}
+.order-detail {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.order-detail .order-header {
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  color: #666;
+  padding-left: 10px;
+}
+.order-detail .offline-pay,
+.order-detail .online-pay {
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px solid #e3e3e3;
+}
+.order-detail .offline-pay [table]:first-child,
+.order-detail .online-pay [table]:first-child {
+  padding-left: 10px;
+}
+.order-btn {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  left: 0;
+  right: 0;
+  font-size: 19px;
+}
+.order-btn .total-price {
+  background-color: #fff;
+  color: #ff5650;
+}
+.order-btn .submit-btn {
+  background: #ff5650;
+  color: #fefefe;
+}
