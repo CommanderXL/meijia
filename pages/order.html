@@ -40,11 +40,15 @@
                     </li>
                     <li table class="info-li date-person">
                         <div table="cell v-m h-l p30">预约人: </div>
-                        <div table="cell v-m h-l">风光</div>
+                        <div table="cell v-m h-l">
+                            <input type="text" class="person-name" value="风光">
+                        </div>
                     </li>
                     <li table class="info-li phone">
                         <div table="cell v-m h-l p30">手机号: </div>
-                        <div table="cell v-m h-l">123123123</div>
+                        <div table="cell v-m h-l">
+                            <input type="text" class="phone-num" value="1300000000">
+                        </div>
                     </li>
                     <li table class="info-li service-time">
                         <div table="cell v-m h-l p30">服务时间: </div>
@@ -52,7 +56,9 @@
                     </li>
                     <li table class="info-li info">
                         <div table="cell v-m h-l p30">备注信息: </div>
-                        <div table="cell v-m h-l"></div>
+                        <div table="cell v-m h-l">
+                            <input type="text" class="another-info" style="width: 100%;">
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -79,5 +85,35 @@
             <div table="cell v-m h-c" class="submit-btn">提交订单</div>
         </div>
     </div>
+    <script>
+        (function (window) {
+            var domMap = {
+                subBtn: document.querySelector('.substract-btn'),
+                addBtn: document.querySelector('.add-btn'),
+                offLineBtn: document.querySelector('.offline-pay'),
+                onLineBtn: document.querySelector('.online-pay'),
+                orderNum: document.querySelector('.order-num')
+            };
+
+            domMap.offLineBtn.addEventListener('click', function () {
+                !this.classList.contains('active') && this.classList.add('active');
+                domMap.onLineBtn.classList.contains('active') && domMap.onLineBtn.classList.remove('active');
+            });
+
+            domMap.onLineBtn.addEventListener('click', function () {
+                !this.classList.contains('active') && this.classList.add('active');
+                domMap.offLineBtn.classList.contains('active') && domMap.offLineBtn.classList.remove('active');
+            });
+
+            domMap.subBtn.addEventListener('click', function () {
+                var num = +domMap.orderNum.innerHTML;
+                (num > 0) && (domMap.orderNum.innerHTML = --num)
+            });
+
+            domMap.addBtn.addEventListener('click', function () {
+                domMap.orderNum.innerHTML = +domMap.orderNum.innerHTML + 1;
+            });
+        })(window);
+    </script>
 </body>
 </html>

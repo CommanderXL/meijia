@@ -110,6 +110,9 @@
   padding-left: 10px;
   color: #878787;
 }
+.person-info input {
+  font-size: 15px;
+}
 .order-detail {
   background-color: #fff;
   margin-bottom: 10px;
