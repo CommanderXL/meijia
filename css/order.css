@@ -27,7 +27,6 @@
   position: relative;
   font-size: 17px;
   color: #333;
-  margin-top: 4px;
   margin-bottom: 8px;
 }
 .shop-item .shop-detail .goods-name .shop-price {
@@ -41,7 +40,7 @@
   position: relative;
   font-size: 17px;
   color: #333;
-  margin-bottom: 11px;
+  margin-bottom: 8px;
 }
 .shop-item .shop-detail .shop-name .shop-distance {
   position: absolute;

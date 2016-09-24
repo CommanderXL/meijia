@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 html,
 body {
@@ -26,4 +27,7 @@ a:active {
 }
 input {
   outline: none;
+  -webkit-appearance: none;
+  -webkit-user-select: auto;
+  border: 0;
 }

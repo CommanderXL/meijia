@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent; //用来解决用户点击出现高亮的情况
 }
 
 html, body {
@@ -27,4 +28,7 @@ a:link, a:hover, a:visited, a:active {
 
 input {
   outline: none;
+  -webkit-appearance: none;
+  -webkit-user-select: auto;
+  border: 0;
 }
