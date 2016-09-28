@@ -38,7 +38,7 @@
                     + '</div>'
                     + '<div class="dialog-tips">提交失败</div>'
                     + '</div>'
-                    + '<div class="dialog-btns">'
+                    + '<div table class="dialog-btns">'
                     + '</div>'
                 + '</div>',
             settable_map: {
@@ -46,26 +46,26 @@
                 title: true,
                 tips: true,
                 btn: true
-                }
             },
-            stateMap = {
-                imgUrl: '',
+            imgUrl: '',
+            title: '',
+            tips: '',
+            btn: {
                 title: '',
-                tips: '',
-                btn: {
-                    title: '',
-                    cb: null
-                }
+                cb: null
+            }
             },
             domMap = {
                 body: document.querySelector('body'),
                 alertDom: document.createElement('div')
             },
-            setDomMap, initModule, configModule;
+            setDomMap, initModule, configModule,
+            alert, confirm;
 
         setDomMap = function () {
             domMap.dialogBtns = document.querySelector('.dialog-btns');
             domMap.dialogTips = document.querySelector('.dialog-tips');
+            domMap.dialogContainer = document.querySelector('.dialog-container');
             domMap.img = document.querySelector('.dialog-img-src');
         };
 
@@ -79,20 +79,55 @@
 
 
         initModule = function (opt) {
+            domMap.alertDom.className = 'dialog-container';
             domMap.alertDom.innerHTML = configMap.main_html;
             domMap.body.appendChild(domMap.alertDom);
             setDomMap();
 
-            domMap.img.src = configMap
+            //domMap.img.src = configMap.imgUrl;
+            //domMap.dialogTips.innerHTML = configMap.tips;
+            //domMap.dialogBtns.innerHTML = configMap.btn.title;
+        };
+
+        initModule();
+
+
+        alert = function (opt) {
+            //domMap.img.src = opt.imgUrl || '';
+            domMap.dialogTips.innerHTML = opt.tips || '';
+
+            !domMap.dialogBtns.classList.contains('dialog-alert') && domMap.dialogBtns.classList.add('dialog-alert');
+            var btn_html = String()
+                    + '<div table="cell v-m h-c" class="dialog-alert-btn">'
+                    + opt.btn.title
+                    + '</div>';
+            domMap.dialogBtns.innerHTML = btn_html || '';
+
+
+            document.querySelector('.dialog-alert-btn').addEventListener('click', function () {
+                domMap.dialogContainer.style.display = 'none';
+            });
+
+
+
+           /* setTimeout(function () {
+                domMap.dialogContainer.style.display = 'none';
+            }, 3000);*/
+        };
+
+        confirm = function (opt) {
+
         };
 
         return {
-            initModule: initModule,
-            configModule: configModule
+            //initModule: initModule,
+            configModule: configModule,
+            alert: alert,
+            confirm: confirm
         }
     })();
 
-    window.dialog = {
+    /*window.dialog = {
         configState: {
             imgUrl: '',
             title: '',
@@ -152,6 +187,6 @@
 
     dialog.confirm = function () {
 
-    };
+    };*/
 })(window);
 
