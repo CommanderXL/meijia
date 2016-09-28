@@ -39,6 +39,10 @@
                     + '<div class="dialog-tips">提交失败</div>'
                     + '</div>'
                     + '<div table class="dialog-btns">'
+                    +   '<div table="cell v-m h-c" class="alert-btn">'
+                    +   '</div>'
+                    +   '<div class="confirm-box" style="display: none;">'
+                    +   '</div>'
                     + '</div>'
                 + '</div>',
             settable_map: {
@@ -65,6 +69,7 @@
         setDomMap = function () {
             domMap.dialogBtns = document.querySelector('.dialog-btns');
             domMap.dialogTips = document.querySelector('.dialog-tips');
+            domMap.alertBtn = document.querySelector('.alert-btn');
             domMap.dialogContainer = document.querySelector('.dialog-container');
             domMap.img = document.querySelector('.dialog-img-src');
         };
@@ -83,110 +88,37 @@
             domMap.alertDom.innerHTML = configMap.main_html;
             domMap.body.appendChild(domMap.alertDom);
             setDomMap();
-
-            //domMap.img.src = configMap.imgUrl;
-            //domMap.dialogTips.innerHTML = configMap.tips;
-            //domMap.dialogBtns.innerHTML = configMap.btn.title;
         };
 
+        //模块的初始化
         initModule();
 
 
         alert = function (opt) {
             //domMap.img.src = opt.imgUrl || '';
+            //alert配置信息
             domMap.dialogTips.innerHTML = opt.tips || '';
 
-            !domMap.dialogBtns.classList.contains('dialog-alert') && domMap.dialogBtns.classList.add('dialog-alert');
-            var btn_html = String()
-                    + '<div table="cell v-m h-c" class="dialog-alert-btn">'
-                    + opt.btn.title
-                    + '</div>';
-            domMap.dialogBtns.innerHTML = btn_html || '';
+            domMap.dialogBtns.className = 'dialog-btns dialog-alert';
 
+            domMap.alertBtn.innerHTML = opt.btn.title || '';
 
-            document.querySelector('.dialog-alert-btn').addEventListener('click', function () {
+            domMap.alertDom.addEventListener('click', function () {
                 domMap.dialogContainer.style.display = 'none';
             });
-
-
-
-           /* setTimeout(function () {
-                domMap.dialogContainer.style.display = 'none';
-            }, 3000);*/
         };
 
         confirm = function (opt) {
+            domMap.dialogTips.innerHTML = opt.tips || '';
 
+            domMap.dialogBtns.className = 'dialog-btns dialog-confirm';
         };
 
         return {
-            //initModule: initModule,
             configModule: configModule,
             alert: alert,
             confirm: confirm
         }
     })();
-
-    /*window.dialog = {
-        configState: {
-            imgUrl: '',
-            title: '',
-            tips: '',
-            btn: {
-                title: '',
-                cb: null       //按钮的回调函数
-            }
-        },
-        domMap: {
-            body: document.querySelector('body'),
-            alertDom: document.createElement('div')
-        },
-        htmlSnippet: {
-
-        },
-        init: function () {
-            this.domMap.alertDom.className = 'dialog-container';
-            this.domMap.alertDom.innerHTML = String()
-                + '<div class="dialog-wrapper">'
-                    + '<div class="dialog-body">'
-                        + '<div table>'
-                            + '<div table="cell v-m h-c" class="dialog-img-box">'
-                                + '<img class="dialog-img-src" src="../images/public_toast_error.png">'
-                            + '</div>'
-                        + '</div>'
-                        + '<div class="dialog-tips">提交失败</div>'
-                    + '</div>'
-                    + '<div class="dialog-btns">'
-                    + '</div>'
-                + '</div>';
-
-            this.domMap.dialogBtn = document.querySelector('.dialog-btns');
-            this.domMap.dialogTips = document.querySelector('.dialog-tips');
-        }
-    };
-
-    dialog.alert = function (str) {
-
-        this.init();
-
-        this.domMap.alertDom.innerHTML = '<div class="dialog-wrapper">'
-                + '<div class="dialog-body">'
-                    + '<div table>'
-                        + '<div table="cell v-m h-c" class="dialog-img-box">'
-                            + '<img src="../images/public_toast_error.png">'
-                        + '</div>'
-                    + '</div>'
-                    + '<div class="dialog-tips">提交失败</div>'
-                + '</div>'
-                + '<div class="dialog-btns">'
-                + '</div>'
-            + '</div>';
-
-        this.domMap.body.appendChild(this.domMap.alertDom);
-    };
-
-    dialog.confirm = function () {
-
-    };*/
 })(window);
 
