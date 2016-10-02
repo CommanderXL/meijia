@@ -64,7 +64,7 @@
                 alertDom: document.createElement('div')
             },
             setDomMap, initModule, configModule,
-            alert, confirm;
+            alert, confirm, tips;
 
         setDomMap = function () {
             domMap.dialogBtns = document.querySelector('.dialog-btns');
@@ -86,6 +86,7 @@
         initModule = function (opt) {
             domMap.alertDom.className = 'dialog-container';
             domMap.alertDom.innerHTML = configMap.main_html;
+            domMap.alertDom.classList.add('dialog-hide');
             domMap.body.appendChild(domMap.alertDom);
             setDomMap();
         };
@@ -114,10 +115,26 @@
             domMap.dialogBtns.className = 'dialog-btns dialog-confirm';
         };
 
+        tips = function (opt) {
+
+            domMap.alertDom.classList.contains('dialog-hide') && domMap.alertDom.classList.remove('dialog-hide');
+
+            domMap.img.src = opt.state === 'success' ? '../images/public_toast_icorrect.png' : '../images/public_toast_error.png';
+
+            domMap.dialogTips.innerHTML = opt.tips || '';
+
+            domMap.dialogBtns.className = 'dialog-btns dialog-hide';
+
+            setTimeout(function () {
+                domMap.alertDom.classList.add('dialog-hide');
+            }, 1000);
+        };
+
         return {
             configModule: configModule,
             alert: alert,
-            confirm: confirm
+            confirm: confirm,
+            tips: tips
         }
     })();
 })(window);

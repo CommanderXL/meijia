@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/dialog.css">
     <link rel="stylesheet" href="../css/collection.css">
 </head>
 <body>
@@ -15,8 +16,8 @@
             <div table="cell v-m h-c" class="header-box">
                 <img class="page-logo" src="../images/logo.png" alt="logo">
             </div>
-            <div table="cell v-m h-c p10" class="page-edit">
-                编辑
+            <div table="cell v-m h-c p30" class="page-edit">
+                <span>编辑</span>
             </div>
         </div>
         <div class="page-section page-collection">
@@ -184,6 +185,7 @@
             </ul>
         </div>
     </div>
+    <script src="../js/base.js"></script>
     <script>
         (function (window) {
             var pageModel = {
@@ -204,7 +206,12 @@
                         }
                         var target = e.target;
                         if(target.classList.contains('cancel-collection')) {
-                            console.log('well done');
+                            //添加ajax请求
+                            domMap.listBox.removeChild(target.parentNode.parentNode.parentNode);
+                            dialog.tips({
+                                tips: '取消成功',
+                                state: 'success'
+                            });
                         }
                     });
 

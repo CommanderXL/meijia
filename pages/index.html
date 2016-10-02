@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/dialog.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
@@ -89,7 +90,7 @@
             </div>
             <div table class="page-nav">
                 <div table="cell v-m h-c p50" class="nav-item">
-                    <span class="hot-recommander">热销推荐</span>
+                    <span class="hot-recommander active-recommander">热销推荐</span>
                 </div>
                 <div table="cell v-m h-c p50" class="nav-item">
                     <span class="all-recommander">全部美甲</span>
@@ -171,7 +172,7 @@
             </ul>
         </div>
     </div>
-
+    <script src="../js/base.js"></script>
     <script>
         !function (window) {
             var pageModel = {
@@ -181,16 +182,64 @@
 
                     this.domMap = {
                         userNameEl: container.querySelector('.page-human'),
-                        sideNavEl: container.querySelector('.page-side-nav')
+                        sideNavEl: container.querySelector('.page-side-nav'),
+                        pageListBox: container.querySelector('.page-list-box'),
+                        pageNav: container.querySelector('.page-nav'),
+                        hotRecommander: container.querySelector('.hot-recommander'),
+                        allRecommander: container.querySelector('.all-recommander')
                     }
                 },
                 eventFn: function () {
                     var self = this;
                     var doms = this.domMap;
 
+                    //侧边栏
                     doms.userNameEl.addEventListener('click', function () {
                         doms.sideNavEl.classList.toggle('side-nav-show');
-                    })
+                    });
+
+                    //导航点击
+                    doms.pageNav.addEventListener('click', function (e) {
+                        var target = e.target;
+                        if(target.classList.contains('active-recommander')) return;
+                        //热门推荐
+                        if(target.classList.contains('hot-recommander')) {
+                            self.domMap.hotRecommander.classList.add('active-recommander');
+                            self.domMap.allRecommander.classList.remove('active-recommander');
+                        }
+                        //全部推荐
+                        else {
+                            self.domMap.allRecommander.classList.add('active-recommander');
+                            self.domMap.hotRecommander.classList.remove('active-recommander');
+                        }
+                    });
+
+                    //商品点击
+                    doms.pageListBox.addEventListener('click', function (e) {
+                        var target = e.target,
+                                _classList = target.classList,
+                                _opt = {
+                                    tips: '',
+                                    state: 'success'
+                                };
+
+                        if(_classList.contains('item-collect')) {
+                            e.preventDefault();
+
+                            if(_classList.contains('collect-success')) {
+                                _opt.tips = '取消收藏';
+                                _classList.remove('collect-success');
+                            } else {
+                                _opt.tips = '收藏成功';
+                                _classList.add('collect-success');
+                            }
+
+                            //TODO  带上ajax请求
+
+                            //dialog弹窗
+                            dialog.tips(_opt);
+                        }
+                    });
                 },
                 init: function () {
                     this.setDomMap();
