@@ -1,0 +1,45 @@
+.page-container {
+  position: relative;
+  height: 100%;
+}
+.article-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+.article-list .article-item {
+  margin-bottom: 10px;
+}
+.article-list a.link {
+  position: relative;
+  display: block;
+}
+.article-list a.link .img-box {
+  position: relative;
+  height: 180px;
+}
+.article-list a.link .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.article-list a.link .article-detail {
+  font-size: 15px;
+  line-height: 1;
+  padding: 10px 13px 10px 13px;
+  color: #878787;
+  background-color: #fff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

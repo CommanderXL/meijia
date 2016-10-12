@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <title>NARA</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/table.css">
-    <link rel="stylesheet" href="../css/dialog.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/reset-1.css">
+    <link rel="stylesheet" href="../css/common-1.css">
+    <link rel="stylesheet" href="../css/table-1.css">
+    <link rel="stylesheet" href="../css/dialog-1.css">
+    <link rel="stylesheet" href="../css/index-1.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <style>
+        .swiper-slide img {
+            width: 320px;
+        }
+    </style>
 </head>
+
 <body>
     <div class="page-container">
         <div class="page-side-nav">
@@ -22,51 +30,63 @@
                 </p>
             </div>
             <ul class="side-ul">
-                <li class="side-li"><a table href="" class="link pending-payment">
-                    <div table="cell v-m">
-                        <p>
-                            <span class="link-text">待付款</span>
-                        </p>
-                    </div>
-                </a></li>
-                <li class="side-li"><a table href="" class="link pending-use">
-                    <div table="cell v-m">
-                        <p>
-                            <span class="link-text">
+                <li class="side-li">
+                    <a table href="" class="link pending-payment">
+                        <div table="cell v-m">
+                            <p>
+                                <span class="link-text">待付款</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="side-li">
+                    <a table href="" class="link pending-use">
+                        <div table="cell v-m">
+                            <p>
+                                <span class="link-text">
                                 待使用
                                 <span class="text-tips">4</span>
-                            </span>
-                        </p>
-                    </div>
-                </a></li>
-                <li class="side-li"><a table href="" class="link pending-comment">
-                    <div table="cell v-m">
-                        <p>
-                            <span class="link-text">待评价</span>
-                        </p>
-                    </div>
-                </a></li>
-                <li class="side-li"><a table href="" class="link pending-refund">
-                    <div table="cell v-m">
-                        <p>
-                            <span class="link-text">退款/售后</span>
-                        </p>
-                    </div>
-                </a></li>
-                <li class="side-li"><a table href="" class="link my-collection">
-                    <div table="cell v-m">
-                        <p>
-                            <span class="link-text">我的收藏</span>
-                        </p>
-                    </div>
-                </a></li>
-                <li class="side-li"><a table href="" class="link connect-platform">
-                    <div table="cell v-m">
-                        <p>
-                            <span class="link-text">联系平台</span>
-                        </p>
-                    </div>
-                </a></li>
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="side-li">
+                    <a table href="" class="link pending-comment">
+                        <div table="cell v-m">
+                            <p>
+                                <span class="link-text">待评价</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="side-li">
+                    <a table href="" class="link pending-refund">
+                        <div table="cell v-m">
+                            <p>
+                                <span class="link-text">退款/售后</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="side-li">
+                    <a table href="" class="link my-collection">
+                        <div table="cell v-m">
+                            <p>
+                                <span class="link-text">我的收藏</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="side-li">
+                    <a table href="" class="link connect-platform">
+                        <div table="cell v-m">
+                            <p>
+                                <span class="link-text">联系平台</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
         <div table class="page-header">
@@ -79,101 +99,123 @@
         </div>
         <div class="page-section">
             <div class="page-article">
-                <div class="imgs-box">
-
-                </div>
-                <div class="article-nav">
-                    <span class="nav-text">
+                <div class="imgs-box swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../images/home-demo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../images/home-demo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../images/home-demo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../images/home-demo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="article-nav">
+                        <span class="nav-text">
                         <a href="./article-list.html">往期文章</a>
                     </span>
+                    </div>
                 </div>
+                <div table class="page-nav">
+                    <div table="cell v-m h-c p50" class="nav-item">
+                        <span class="hot-recommander active-recommander">热销推荐</span>
+                    </div>
+                    <div table="cell v-m h-c p50" class="nav-item">
+                        <span class="all-recommander">全部美甲</span>
+                    </div>
+                </div>
+                <ul class="page-list-box">
+                    <li class="list-item">
+                        <a class="list-link" href="">
+                            <div class="item-img">
+                                <img src="../images/home-demo.png" alt="" class="main-pic">
+                                <div class="item-collect">
+
+                                </div>
+                            </div>
+                            <div table class="sale-info">
+                                <p table="cell v-m h-c p50" class="info-name">
+                                    水墨清韵1
+                                </p>
+                                <p table="cell v-m h-c p50" class="info-price">
+                                    <span class="price-detail">¥ 120 </span>起
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a class="list-link" href="">
+                            <div class="item-img">
+                                <img src="../images/home-demo.png" alt="" class="main-pic">
+                                <div class="item-collect">
+
+                                </div>
+                            </div>
+                            <div table class="sale-info">
+                                <p table="cell v-m h-c p50" class="info-name">
+                                    水墨清韵1
+                                </p>
+                                <p table="cell v-m h-c p50" class="info-price">
+                                    <span class="price-detail">¥ 120 </span>起
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a class="list-link" href="">
+                            <div class="item-img">
+                                <img src="../images/home-demo.png" alt="" class="main-pic">
+                                <div class="item-collect">
+
+                                </div>
+                            </div>
+                            <div table class="sale-info">
+                                <p table="cell v-m h-c p50" class="info-name">
+                                    水墨清韵1
+                                </p>
+                                <p table="cell v-m h-c p50" class="info-price">
+                                    <span class="price-detail">¥ 120 </span>起
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a class="list-link" href="">
+                            <div class="item-img">
+                                <img src="../images/home-demo.png" alt="" class="main-pic">
+                                <div class="item-collect">
+
+                                </div>
+                            </div>
+                            <div table class="sale-info">
+                                <p table="cell v-m h-c p50" class="info-name">
+                                    水墨清韵1
+                                </p>
+                                <p table="cell v-m h-c p50" class="info-price">
+                                    <span class="price-detail">¥ 120 </span>起
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div table class="page-nav">
-                <div table="cell v-m h-c p50" class="nav-item">
-                    <span class="hot-recommander active-recommander">热销推荐</span>
-                </div>
-                <div table="cell v-m h-c p50" class="nav-item">
-                    <span class="all-recommander">全部美甲</span>
-                </div>
-            </div>
-            <ul class="page-list-box">
-                <li class="list-item">
-                    <a class="list-link" href="">
-                        <div class="item-img">
-                            <img src="../images/home-demo.png" alt="" class="main-pic">
-                            <div class="item-collect">
-
-                            </div>
-                        </div>
-                        <div table class="sale-info">
-                            <p table="cell v-m h-c p50" class="info-name">
-                                水墨清韵1
-                            </p>
-                            <p table="cell v-m h-c p50" class="info-price">
-                                <span class="price-detail">¥ 120 </span>起
-                            </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a class="list-link" href="">
-                        <div class="item-img">
-                            <img src="../images/home-demo.png" alt="" class="main-pic">
-                            <div class="item-collect">
-
-                            </div>
-                        </div>
-                        <div table class="sale-info">
-                            <p table="cell v-m h-c p50" class="info-name">
-                                水墨清韵1
-                            </p>
-                            <p table="cell v-m h-c p50" class="info-price">
-                                <span class="price-detail">¥ 120 </span>起
-                            </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a class="list-link" href="">
-                        <div class="item-img">
-                            <img src="../images/home-demo.png" alt="" class="main-pic">
-                            <div class="item-collect">
-
-                            </div>
-                        </div>
-                        <div table class="sale-info">
-                            <p table="cell v-m h-c p50" class="info-name">
-                                水墨清韵1
-                            </p>
-                            <p table="cell v-m h-c p50" class="info-price">
-                                <span class="price-detail">¥ 120 </span>起
-                            </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a class="list-link" href="">
-                        <div class="item-img">
-                            <img src="../images/home-demo.png" alt="" class="main-pic">
-                            <div class="item-collect">
-
-                            </div>
-                        </div>
-                        <div table class="sale-info">
-                            <p table="cell v-m h-c p50" class="info-name">
-                                水墨清韵1
-                            </p>
-                            <p table="cell v-m h-c p50" class="info-price">
-                                <span class="price-detail">¥ 120 </span>起
-                            </p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
         </div>
-    </div>
-    <script src="../js/base.js"></script>
-    <script>
+        <script src="../js/base-1.js"></script>
+        <script src="../js/swiper.min.js"></script>
+        <script>
         !function (window) {
             var pageModel = {
                 domMap: {},
@@ -197,6 +239,24 @@
                     doms.userNameEl.addEventListener('click', function () {
                         doms.sideNavEl.classList.toggle('side-nav-show');
                     });
+
+
+                    var startX;
+
+                    doms.sideNavEl.addEventListener('touchstart', function(e) {
+                        e.preventDefault();
+                        startX = e.touches[0].pageX;
+                    });
+
+                    doms.sideNavEl.addEventListener('touchmove', function (e) {
+                        e.preventDefault();
+                        var touch = e.touches[0];
+                        if(touch.pageX - startX > 0) {
+                            doms.sideNavEl.classList.contains('side-nav-show') && doms.sideNavEl.classList.remove('side-nav-show');
+                            return;
+                        }
+                    });
+                    
 
                     //导航点击
                     doms.pageNav.addEventListener('click', function (e) {
@@ -249,7 +309,12 @@
             };
 
             pageModel.init();
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true
+            })
         }(window);
     </script>
 </body>
+
 </html>

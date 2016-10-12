@@ -5,10 +5,10 @@
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <meta name="format-detection" content="telephone=no">
     <title>待付款</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/table.css">
-    <link rel="stylesheet" href="../css/pending-payment.css">
+    <link rel="stylesheet" href="../css/reset-1.css">
+    <link rel="stylesheet" href="../css/common-1.css">
+    <link rel="stylesheet" href="../css/table-1.css">
+    <link rel="stylesheet" href="../css/pending-payment-1.css">
 </head>
 <body>
     <div class="page-container">
@@ -32,28 +32,8 @@
                                 <span class="price">¥ 120 </span>起<span class="nums-title">数量: </span><span class="num">X 2</span>
                             </p>
                         </div>
-                    </div>
-                    <div class="li-footer">
-                        待付款
-                    </div>
-                </li>
-                <li class="list-li">
-                    <div table class="li-header">
-                        <div table="cell p40 v-m h-l" class="shop-name">
-                            水墨美甲店
-                        </div>
-                        <div table="cell v-m h-r" class="order-detail">
-                            订单编号: 454323424234
-                        </div>
-                    </div>
-                    <div class="li-body clearfix">
-                        <img class="order-img" src="../images/home-demo.png" alt="" style="width: 90px;height: 90px;">
-                        <div class="order-detail">
-                            <p class="order-name">水传统金</p>
-                            <p class="order-time">2016年8月9日</p>
-                            <p class="order-num">
-                                <span class="price">¥ 120 </span>起<span class="nums-title">数量: </span><span class="num">X 2</span>
-                            </p>
+                        <div table class="order-cancel">
+                            删除
                         </div>
                     </div>
                     <div class="li-footer">
@@ -78,6 +58,9 @@
                                 <span class="price">¥ 120 </span>起<span class="nums-title">数量: </span><span class="num">X 2</span>
                             </p>
                         </div>
+                        <div table class="order-cancel">
+                                删除
+                        </div>
                     </div>
                     <div class="li-footer">
                         待付款
@@ -100,6 +83,35 @@
                             <p class="order-num">
                                 <span class="price">¥ 120 </span>起<span class="nums-title">数量: </span><span class="num">X 2</span>
                             </p>
+                        </div>
+                        <div table class="order-cancel">
+                            删除
+                        </div>
+                    </div>
+                    <div class="li-footer">
+                        待付款
+                    </div>
+                </li>
+                <li class="list-li">
+                    <div table class="li-header">
+                        <div table="cell p40 v-m h-l" class="shop-name">
+                            水墨美甲店
+                        </div>
+                        <div table="cell v-m h-r" class="order-detail">
+                            订单编号: 454323424234
+                        </div>
+                    </div>
+                    <div class="li-body clearfix">
+                        <img class="order-img" src="../images/home-demo.png" alt="" style="width: 90px;height: 90px;">
+                        <div class="order-detail">
+                            <p class="order-name">水传统金</p>
+                            <p class="order-time">2016年8月9日</p>
+                            <p class="order-num">
+                                <span class="price">¥ 120 </span>起<span class="nums-title">数量: </span><span class="num">X 2</span>
+                            </p>
+                        </div>
+                        <div table class="order-cancel">
+                            删除
                         </div>
                     </div>
                     <div class="li-footer">
@@ -109,5 +121,39 @@
             </ul>
         </div>
     </div>
+    <script>
+        (function (window) {
+            var dom = {
+                pageList: document.querySelector('.page-list')
+            };
+
+            var startX;
+
+            dom.pageList.addEventListener('touchstart', function (e) {
+                e.preventDefault();
+                var target = e.target;
+                if(target.classList.contains('order-detail')) {
+                    startX = e.touches[0].pageX;
+                }
+            });
+
+            dom.pageList.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+                var target = e.target,
+                        touch = e.touches[0],
+                        parent;
+                if(target.classList.contains('order-detail')) {
+                    parent = target.parentNode;
+                    if((touch.pageX - startX) < 0) {
+                        //parent.style.transform = 'translateX(-40px)';
+                        !parent.classList.contains('move-left') && parent.classList.add('move-left');
+                    } else {
+                        parent.classList.contains('move-left') && parent.classList.remove('move-left');
+                    }
+                }
+
+            });
+        })(window);
+    </script>
 </body>
 </html>

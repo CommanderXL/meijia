@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta charset="UTF-8">
+    <title>Slide Demo</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/slide.css">
+</head>
+<body>
+<div class="demo">
+
+</div>
+<script src="../js/slide.js"></script>
+<script>
+    (function () {
+        slide.configModule({
+            imgUrls: ['../images/select-shop1.png', '../images/select-shop2.png', '../images/che.jpg', '../images/taxi-pasger-protocol.png']
+        });
+        slide.initModule(document.querySelector('.demo'));
+    })();
+</script>
+</body>
+</html>

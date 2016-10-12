@@ -1,0 +1,144 @@
+.page-container {
+  background: #f0f0f0;
+}
+.container-detail {
+  position: absolute;
+  top: 0;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.product-detail {
+  position: relative;
+}
+.product-detail .detail-img {
+  height: 240px;
+}
+.product-detail .detail-content {
+  padding: 0 15px 20px 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.product-detail .detail-content .content-header {
+  padding: 15px 0;
+}
+.product-detail .detail-content .content-header .product-name {
+  font-size: 17px;
+  color: #333;
+}
+.product-detail .detail-content .content-header .collection-btn {
+  position: relative;
+  font-size: 15px;
+  color: #666;
+}
+.product-detail .detail-content .content-header .collection-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 32px;
+  height: 16px;
+  width: 16px;
+  background: url("../images/side_icon_collection@2x.png");
+  background-size: contain;
+}
+.product-detail .detail-content p {
+  font-size: 15px;
+  line-height: 18px;
+  color: #878787;
+}
+.product-detail .detail-price {
+  padding-left: 14px;
+  border-bottom: 2px solid #f0f0f0;
+  background-color: #fff;
+}
+.product-detail .detail-price .active-price {
+  padding: 9px 0 13px 0;
+  font-size: 15px;
+  line-height: 20px;
+}
+.product-detail .detail-price .active-price .money {
+  color: red;
+  margin-right: 4px;
+}
+.product-detail .detail-price .active-price .upper-price {
+  margin-right: 21px;
+}
+.product-detail .detail-price .active-price .tips-price {
+  font-size: 15px;
+  color: #c4c4c4;
+}
+.product-detail .detail-price .user-like {
+  margin-bottom: 9px;
+}
+.product-detail .detail-time {
+  color: #adadad;
+  font-size: 15px;
+  height: 46px;
+  background-color: #fff;
+}
+.product-detail .detail-time div[table]:first-child {
+  border-right: 2px solid #f0f0f0;
+}
+.user-comment {
+  margin-top: 10px;
+  background-color: #fff;
+}
+.user-comment .comment-header {
+  font-size: 17px;
+  line-height: 1;
+  padding: 15px;
+  text-align: center;
+  color: #333;
+}
+.user-comment .comment-list .comment-li {
+  border-top: 2px solid #f0f0f0;
+}
+.user-comment .comment-list .comment-info {
+  padding: 13px 0 2px 13px;
+}
+.user-comment .comment-list .comment-info .img-box {
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  background-image: url("../images/home-page_icon_whole_selected@2x.png");
+  background-size: contain;
+}
+.user-comment .comment-list .comment-info .user-info {
+  font-size: 15px;
+}
+.user-comment .comment-list .comment-info .user-info .name {
+  margin-bottom: 5px;
+  color: #505050;
+}
+.user-comment .comment-list .comment-info .user-info .comment-time {
+  color: #b3b3b3;
+}
+.user-comment .comment-list .comment-detail {
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 14px 16px 14px;
+  color: #878787;
+}
+.order-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #ff5650;
+  font-size: 17px;
+  background-color: #fff;
+}
+.all-btn {
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  color: #878787;
+  text-align: center;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
